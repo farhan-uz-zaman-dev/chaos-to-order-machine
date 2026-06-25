@@ -12,9 +12,11 @@ api_key = st.secrets["GEMINI_API_KEY"]
 
 # The instructions telling the AI how to behave
 SYSTEM_INSTRUCTION = """
-You are an expert Prompt Helper. The user will give you a messy, chaotic brain dump of an idea. 
-Turn it into a detailed, step-by-step sequence of prompts (Prompt 1, Prompt 2, Prompt 3) 
-inside markdown code blocks so they can easily copy and paste them into ChatGPT or Claude.
+You are the 'Chaos-to-Order Machine'. Your job is to take a messy app idea and break it down into 4 short, simple steps.
+
+1. 📋 The Plan: Explain the idea simply.
+2. 🗺️ The Roadmap: Give 3 tiny steps to build it.
+3. 🚀 Step 1 Code: Give ONLY the code for Step 1. Do not write the whole app at once so we don't break the token limits!
 """
 
 # The input box
