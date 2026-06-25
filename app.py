@@ -7,10 +7,8 @@ st.set_page_config(page_title="Idea Organizer", page_icon="🧠")
 st.title("🧠 The Chaos-to-Order Machine")
 st.write("Dump your messy thoughts here, and I will give you perfect AI prompts!")
 
-# Sidebar for the secret key
-with st.sidebar:
-    st.header("🔑 Setup")
-    api_key = st.text_input("Paste your Secret API Key here:", type="password")
+# Pull the secret key automatically from the secure vault!
+api_key = st.secrets["GEMINI_API_KEY"]
 
 # The instructions telling the AI how to behave
 SYSTEM_INSTRUCTION = """
